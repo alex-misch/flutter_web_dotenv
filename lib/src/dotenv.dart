@@ -44,17 +44,8 @@ class DotEnv {
   Map<String, String> _env = <String, String>{};
   static DotEnv _singleton;
 
-  Map<String, String> get env {
-    if (_env.isEmpty) {
-      print(
-          '[flutter_dotenv] No env values found. Make sure you have called DotEnv.load()');
-    }
-    return _env;
-  }
-
-  set env(Map<String, String> env) {
-    _env = env;
-  }
+  Map<String, String> get env => _env;
+  set env(Map<String, String> env) => _env = env;
 
   /// True if all supplied variables have nonempty value; false otherwise.
   /// Differs from [containsKey](dart:core) by excluding null values.
