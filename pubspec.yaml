@@ -1,8 +1,8 @@
-name: flutter_dotenv
+name: flutter_web_dotenv
 version: 2.0.2
 description: Easily configure any flutter web application with global variables using a `.env` file.
 author: java-james <james-collins@hotmail.co.nz>
-homepage: https://github.com/java-james/flutter_dotenv
+homepage: https://github.com/alex-misch/flutter_web_dotenv
 environment:
   sdk: ">=2.3.0 <3.0.0"
 dependencies:

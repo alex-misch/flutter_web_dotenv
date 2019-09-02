@@ -1,4 +1,4 @@
-flutter_dotenv
+flutter_web_dotenv
 ==============
 
 Load configuration at runtime from a `.env` file which can be used throughout the applicaiton.
