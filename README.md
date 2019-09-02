@@ -5,7 +5,7 @@ Load configuration at runtime from a `.env` file which can be used throughout th
 
 ## About
 
-This library is a fork of [mockturtl/dotenv] dart library with slight changes to make this work with flutter.
+This library is a fork of [mockturtl/dotenv] dart library with slight changes to make this work with flutter_web.
 It parses the `.env` file into a map contained within a singleton which allows the variables to be used throughout your application.
 
 [mockturtl/dotenv]: https://pub.dartlang.org/packages/dotenv
