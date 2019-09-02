@@ -19,7 +19,6 @@
 ///     const _requiredEnvVars = const ['host', 'port'];
 ///     bool get hasEnv => isEveryDefined(_requiredEnvVars);
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter_web/foundation.dart';
 import 'package:flutter_web/material.dart';
@@ -47,7 +46,7 @@ class DotEnv {
 
   Map<String, String> get env {
     if (_env.isEmpty) {
-      stderr.writeln(
+      print(
           '[flutter_dotenv] No env values found. Make sure you have called DotEnv.load()');
     }
     return _env;
@@ -75,9 +74,9 @@ class DotEnv {
       WidgetsFlutterBinding.ensureInitialized();
       var str = await rootBundle.loadString(filename);
       if (str.isNotEmpty) return str.split('\n');
-      stderr.writeln('[flutter_dotenv] Load failed: file $filename was empty');
+      print('[flutter_dotenv] Load failed: file $filename was empty');
     } on FlutterError {
-      stderr.writeln('[flutter_dotenv] Load failed: file not found');
+      print('[flutter_dotenv] Load failed: file not found');
     }
     return [];
   }
